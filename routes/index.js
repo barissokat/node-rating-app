@@ -11,4 +11,11 @@ router.get('/reverse/:name', (req, res) => {
   res.send(reverse);
 })
 
+router.get('/pug', (req, res) => {
+  res.render('hello', {
+    name: req.query.dog,
+    age: 5
+  });
+});
+
 module.exports = router;

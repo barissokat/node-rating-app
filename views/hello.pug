@@ -1,0 +1,19 @@
+extends layout 
+
+block content 
+    h1 Welcome!
+    div.wrapper
+        - const upDog = name.toUpperCase();
+        p#hello Hello Pug!
+        span My name is #{name}.
+        br
+        span My name is #{upDog}.
+        br
+        span My name is #{name.toUpperCase()}.
+        
+    h2
+        | Welcome
+        em How are you?
+
+    .image.image--dog
+        img.dog(src="dog.jpg" alt=`Dog ${name}`)
