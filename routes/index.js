@@ -13,8 +13,9 @@ router.get('/reverse/:name', (req, res) => {
 
 router.get('/pug', (req, res) => {
   res.render('hello', {
-    name: req.query.dog,
-    age: 5
+    name: typeof req.query.dog !== 'undefined' ? req.query.dog : 'Bob',
+    age: 5,
+    title: 'I love food!'
   });
 });
 
