@@ -12,6 +12,7 @@ router.post('/stores',
     catchErrors(storeController.resize), 
     catchErrors(storeController.store)
 );
+router.get('/stores/:slug', storeController.show);
 router.get('/stores/:id/edit', catchErrors(storeController.edit));
 router.post('/stores/:id',
   storeController.upload,
